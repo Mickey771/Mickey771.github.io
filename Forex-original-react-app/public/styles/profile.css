@@ -1,0 +1,48 @@
+.extra-input.profile-pics {
+    --flex-dir: row;
+    justify-content: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.profile-pics-sub.back .svg-icons {
+    align-items: center;
+    display: flex;
+    gap: 0 10px;
+    font-family: var(--ft-tahoma);
+}
+
+.profile-pics-sub.back .svg-icons svg {
+    fill: var(--black);
+    width: 40px;
+    height: 40px;
+}
+
+.profile-pics-sub.pics {
+    font-family: var(--ft-tahoma);
+    /* background-color: red !important; */
+}
+
+.profile-pics-sub.pics .svg-icons {
+    align-items: center;
+}
+
+.profile-pics-sub.pics .svg-icons svg#users-icon {
+    width: 50px;
+    height: 50px;
+    fill: black;
+}
+
+.profile-pics-sub.pics .svg-icons svg#add-icon {
+    width: 20px;
+    fill: var(--main-blue);
+}
+
+.profile-pics-sub.pics .svg-icons span {
+    font-size: 13px;
+}
+
+.profile-pics-sub.pics h2 {
+    font-weight: 500;
+    color: var(--gray-800);
+}

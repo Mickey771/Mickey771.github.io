@@ -1,0 +1,89 @@
+header#app-header {
+    --h: 60px;
+    --g: 0 20px;
+    align-items: center;
+    background-color: var(--main-blue);
+    height: var(--h);
+    padding: 0 var(--pd-10);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--ft-tahoma);
+    gap: var(--g);
+}
+
+#app-header-logo {
+    --g: 0 20px;
+    align-items: center;
+    gap: var(--g);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#app-header-subscription {
+    --w: auto;
+    align-items: center;
+    display: flex;
+    width: var(--w);
+    justify-content: space-between;
+}
+
+#app-header-subscription>* {
+    /* background-color: red; */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.svg-icons svg {
+    width: var(--svg-wh, 20px);
+    height: var(--svg-wh, 20px);
+    fill: var(--svg-fill, var(--white));
+}
+
+.svg-icons.bell-icon {
+    position: relative;
+}
+
+.svg-icons.bell-icon::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: red;
+    left: 15px;
+}
+
+
+.svg-icons.bell-icon svg {
+    --svg-wh: 30px;
+    --svg-fill: #99C6E4;
+
+}
+
+.svg-icons.flex {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+
+#app-header-logo h1 {
+    color: var(--white);
+    font-size: 17.5px;
+    font-family: var(--ft-tahoma);
+}
+
+
+#app-header-logo h1.app-header-name {
+    white-space: nowrap;
+}
+
+#app-header-logo h1:last-child {
+    font-weight: 400;
+}
+
+main#app-main {
+    padding: 30px var(--pd-10);
+}

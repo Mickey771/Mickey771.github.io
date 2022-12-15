@@ -1,0 +1,123 @@
+/* html,
+body {
+    overflow: hidden !important;
+} */
+
+main#main-app {
+    --flex-dir: column;
+    display: flex;
+    flex-direction: var(--flex-dir);
+    height: 100vh;
+}
+
+#main-app-inner {
+    --w: 100%;
+    --h: 88%;
+    background-color: var(--white);
+    width: var(--w);
+    height: var(--h);
+}
+
+/* Scrollable */
+#scrollable-content {
+    --pd: 20px 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 90%;
+    margin-bottom: 30px;
+    padding: var(--pd);
+}
+
+
+#scrollable-content::-webkit-scrollbar {
+    background-color: var(--main-app-footer-bg);
+    width: 10px;
+    height: 8px;
+}
+
+#scrollable-content::-webkit-scrollbar-thumb {
+    background-color: var(--main-blue);
+}
+
+/* End Of Scrollable */
+
+/* Nav Footer */
+main#main-app nav {
+    --w: 100%;
+    --h: 12%;
+    --flex-dir: row;
+    align-items: center;
+    position: absolute;
+    bottom: 1px;
+    background-color: var(--main-app-footer-bg);
+    padding-left: var(--pd-10);
+    padding-right: var(--pd-10);
+    width: var(--w);
+    height: var(--h);
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    flex-direction: var(--flex-dir);
+    box-shadow: var(--box-md), var(--box-md), var(--box-md);
+}
+
+.nav-sub-link {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px 0;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.nav-sub-link:focus {
+    outline: 1.5px double var(--main-blue);
+    border-radius: 5px;
+
+}
+
+.nav-sub-link .nav-svg-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--fill-link-bg);
+}
+
+.nav-sub-link .nav-svg-desc {
+    --ftsz: 14px;
+    font-family: var(--ft-tahoma);
+    font-size: var(--ft-sz);
+}
+
+.nav-sub-link.active .nav-svg-desc {
+    color: var(--active-fill-link-bg);
+}
+
+.nav-sub-link.active .nav-svg-icon svg {
+    fill: var(--active-fill-link-bg);
+}
+
+
+
+/*End Of Nav Footer */
+
+
+@media (min-width:900px) {
+    main#main-app {
+        --flex-dir: row-reverse;
+        --h: 100%;
+    }
+
+    #main-app-inner {
+        --w: 92%;
+        --h: 100%;
+
+    }
+
+    main#main-app nav {
+        position: relative;
+        --w: 8%;
+        --h: 100%;
+        --flex-dir: column;
+        padding: 20px 2px;
+    }
+}

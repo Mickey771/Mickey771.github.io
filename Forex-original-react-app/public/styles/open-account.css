@@ -1,0 +1,125 @@
+.form-container,
+form#open-account {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    gap: 25px 0;
+    margin-bottom: 30px;
+    padding: 0 var(--pd-10);
+}
+
+.extra-input {
+    --flex-dir: column;
+    --w: 100%;
+    --g: 20px 0;
+    display: flex;
+    flex-direction: var(--flex-dir);
+    gap: var(--g);
+    width: var(--w);
+    margin: 0 auto;
+}
+
+.extra-input.extra {
+    --flex-dir: row;
+    gap: 0 20px;
+}
+
+.extra-input.extra .input-div {
+    width: 50% !important;
+}
+
+.input-div {
+    width: 100%;
+}
+
+.input-div label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    width: 100%;
+}
+
+.input-div label .input-desc {
+    font-family: var(--ft-tahoma);
+}
+
+.input-input input,
+.input-input select {
+    --w: 100%;
+    align-items: center;
+    background-color: var(--btn-bg, var(--white));
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    width: var(--w);
+    font-size: 15px;
+    border: 1px solid var(--gray-400);
+    padding: 18px 25px;
+    outline: none;
+}
+
+.extra-input.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.extra-input.submit-btn button {
+    --w: 100%;
+    --ft-sz: 20px;
+    align-items: center;
+    background-color: var(--main-blue);
+    color: var(--white);
+    font-weight: 400;
+    font-size: var(--ft-sz);
+    border-radius: 8px;
+    gap: 20px;
+    width: var(--w);
+    border: 1px solid var(--gray-400);
+    padding: 18px 25px;
+    outline: none;
+}
+
+
+button.back-btn-arrow {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 0 10px;
+    font-size: 14px;
+    padding: 12px 18px;
+    cursor: pointer;
+    box-shadow: var(--box-sm), var(--box-sm);
+    transition: box-shadow 0.6s;
+
+}
+
+button.back-btn-arrow:hover {
+    box-shadow: var(--box-lg);
+}
+
+button.back-btn-arrow svg {
+    --wh: 20px;
+    --f: var(--black);
+    width: var(--wh);
+    height: var(--wh);
+    fill: var(--f);
+}
+
+@media (min-width:900px) {
+    .extra-input {
+        --flex-dir: row;
+        --w: calc(100% - 50%);
+        --g: 0 20px;
+    }
+
+    .extra-input.submit-btn button {
+        --w: 50%;
+    }
+}

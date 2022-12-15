@@ -1,0 +1,140 @@
+main#sign-up {
+    --w: 100%;
+    font-family: var(--ft-tahoma);
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+    width: var(--w);
+    padding: 0 var(--pd-30);
+    margin-bottom: 20px;
+}
+
+h2.app-logo {
+    color: var(--main-blue);
+}
+
+h1.page-title {
+    --ft-sz: 25px;
+    text-align: center;
+    font-size: var(--ft-sz);
+    color: var(--main-blue);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    gap: 20px 0;
+}
+
+button.general-btn,
+.input-content input,
+.input-content select,
+.forex-btn {
+    --w: 100%;
+    --bg: var(--btn-bg, var(--white));
+    --bor: 1px solid var(--gray-400);
+    --ft-sz: 15px;
+    align-items: center;
+    background-color: var(--bg);
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    width: var(--w);
+    font-size: var(--ft-sz);
+    border: var(--bor);
+    padding: 18px 25px;
+    outline: none;
+}
+
+button.general-btn {
+    --bor: none;
+    --ft-sz: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+button.general-btn.small,
+.input-content input.small,
+.input-content select.small {
+    --w: 50%;
+}
+
+.forex-btn img {
+    --wh: 30px;
+    width: var(--wh);
+    height: var(--wh);
+}
+
+form .or {
+    text-align: center;
+    font-family: var(--ft-tahoma);
+    text-transform: uppercase;
+}
+
+.input-extra {
+    --w: 100%;
+    display: flex;
+    width: var(--w);
+    gap: 0 20px;
+}
+
+.input-extra.half-quater {
+    --w: 80%;
+}
+
+.input-extra.right {
+    justify-content: flex-start;
+    /* text-align: right; */
+    background-color: red;
+}
+
+.input-extra.left {
+    text-align: left;
+}
+
+
+label,
+.input-extra label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px 0;
+}
+
+.input-desc {
+    font-family: var(--ft-tahoma);
+    font-size: 15.5px;
+    font-weight: 400;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+}
+
+.forex-btn.submit {
+    --w: 80%;
+    --btn-bg: var(--main-blue);
+    text-align: center;
+    color: var(--white);
+    justify-content: center;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+
+@media (min-width:600px) {
+    main#sign-up {
+        --w: 500px;
+    }
+}
+
+@media (min-width:900px) {
+    h1.page-title {
+        --ft-sz: 30px;
+    }
+}

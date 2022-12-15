@@ -1,0 +1,33 @@
+#news-page {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+#news-page .market-contents-desc {
+    box-shadow: var(--box-md);
+    font-family: var(--ft-tahoma);
+}
+
+
+@media (min-width:900px) {
+    #news-page .market-contents-desc {
+        padding: 20px;
+    }
+}
+
+#news-page .market-contents-desc>ul {
+    list-style-type: none;
+}
+
+a.see-more-link {
+    color: var(--main-blue);
+}
+
+#news-page .market-contents-desc .news-links {
+    /* background-color: red; */
+    display: flex;
+    gap: 10px 0;
+    flex-direction: column;
+}

@@ -1,0 +1,213 @@
+/**********IMAGES STYLES**********/
+#image-content {
+    --bg-sz: 160%;
+    --min-h: 500px;
+    --pos: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%),
+        url("../src/Images/woman-on-her-phone.jpg") no-repeat;
+    background-size: var(--bg-sz);
+    min-height: var(--min-h);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    justify-items: flex-start;
+    color: var(--white);
+    position: var(--pos);
+}
+
+#image-content-inner {
+    --h: 200px;
+    --m-b: 50px;
+    margin-bottom: var(--m-b);
+    height: var(--h);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-family: var(--ft-tahoma);
+}
+
+#image-content-inner h1 {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+#image-content-inner h1 span:last-child {
+    /* background-color: red; */
+    font-weight: 600;
+
+}
+
+#image-content-inner #image-span-content {
+    --w: auto;
+    width: var(--w);
+}
+
+#image-content-inner #get-started-btn {
+    --w: 50%;
+    --ft-sz: 17px;
+    width: var(--w);
+    padding: 15px 16px;
+    border-radius: 10px;
+    color: var(--white);
+    border: none;
+    background-color: var(--main-blue);
+    font-size: var(--ft-sz);
+    cursor: pointer;
+}
+
+/**********END OF IMAGES STYLES**********/
+
+
+
+
+
+
+/**********MARKET CONTENT STYLES**********/
+#market-contents {
+    --flex-dir: column;
+    --g: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: var(--flex-dir);
+    padding-left: var(--pd-10);
+    padding-right: var(--pd-10);
+    padding-top: var(--pd-50);
+    justify-content: center;
+    gap: var(--g);
+    margin-bottom: 50px;
+
+}
+
+.market-contents-sub,
+.market-title {
+    display: flex;
+    gap: var(--g);
+    flex-direction: column;
+    font-family: var(--ft-tahoma);
+}
+
+.market-contents-sub {
+    /* --h: auto; */
+    --h: 400px;
+    --g: 40px 0;
+    --w: 100%;
+    min-height: var(--h);
+    width: var(--w);
+}
+
+.market-title {
+    --g: 20px 0;
+}
+
+.market-title .market-desc {
+    color: var(--gray-500);
+}
+
+.market-contents-desc ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 20px 0;
+}
+
+.currency-value {
+    text-align: right;
+}
+
+.currency-value-dynamic {
+    color: var(--col);
+}
+
+.currency-value-dynamic.green {
+    --col: rgb(22 163 74);
+}
+
+.currency-value-dynamic.red {
+    --col: rgb(220 38 38);
+    ;
+}
+
+
+.market-contents-desc ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.market-contents-desc ul li.market-news-li {
+    --g: 10px 0;
+    flex-direction: column;
+    gap: var(--g);
+}
+
+
+.market-contents-desc ul li.market-news-li a.see-more-link {
+    color: var(--main-blue);
+}
+
+.market-news-content-inner {
+    font-weight: 600;
+}
+
+
+#market-contents .market-btn {
+    display: flex;
+    justify-content: center;
+}
+
+#market-contents .market-btn a {
+    display: block;
+    text-align: center;
+    color: var(--white);
+    width: 50%;
+    background-color: var(--main-blue);
+    border-radius: 5px;
+    padding: 18px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+/**********END MARKET CONTENT STYLES**********/
+
+@media (min-width:600px) {
+    #image-content-inner #image-span-content {
+        --w: auto;
+    }
+}
+
+@media (min-width:900px) {
+    #image-content {
+        --bg-sz: cover;
+        --min-h: 500px;
+    }
+
+    #image-content-inner {
+        --h: 180px;
+        --m-b: 80px;
+    }
+
+    #image-content-inner #get-started-btn {
+        --w: 30%;
+    }
+
+    #market-contents {
+        /* --flex-dir: row; */
+    }
+
+    .market-contents-sub {
+        --w: 700px;
+    }
+
+    .market-news-content-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}

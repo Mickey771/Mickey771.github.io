@@ -1,0 +1,72 @@
+#quotes-page {
+    padding: var(--pd-10);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#quotes-page ul {
+    --w: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 20px 0;
+    font-family: var(--ft-tahoma);
+    width: var(--w);
+    box-shadow: var(--box-md);
+    padding: 20px;
+}
+
+@media (min-width:900px) {
+    #quotes-page ul {
+        --w: 1000px;
+    }
+
+    #quotes-page ul li {
+        --ft-sz: 100%;
+    }
+}
+
+#quotes-page ul li {
+    --ft-sz: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--ft-sz);
+}
+
+#quotes-page .currency-value h2 {
+    font-weight: 500;
+}
+
+#quotes-page .currency-value svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--f);
+}
+
+#quotes-page .currency-value svg.delete-icon {
+    --f: rgb(239 68 68);
+}
+
+
+#quotes-page .currency-value sup {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#quotes-page .currency-value .currency-value-dynamic.green {
+    --col: rgb(74 222 128);
+}
+
+
+#quotes-page .currency-value .currency-value-dynamic.red {
+    --col: red;
+}
+
+
+
+#quotes-page .currency h2 {
+    font-weight: 400;
+    /* background-color: red; */
+}
